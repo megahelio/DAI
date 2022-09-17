@@ -1,4 +1,4 @@
-package dojo0;
+
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -27,6 +27,6 @@ public class d0 {
         }
 
         Timestamp after = Timestamp.valueOf(LocalDateTime.now());
-        System.out.println("Duracion: " + (after.compareTo(before)));
+        System.out.println("Duracion: " + (after.getTime() - before.getTime()));
     }
 }

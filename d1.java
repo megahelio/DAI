@@ -1,12 +1,15 @@
-package dojo0;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+
+
 
 public class d1 {
     public static void main(String[] args) throws IOException {
-
+        Timestamp before = Timestamp.valueOf(LocalDateTime.now());
         FileInputStream in = null;
         FileOutputStream out = null;
 
@@ -26,5 +29,8 @@ public class d1 {
                 out.close();
             }
         }
+
+        Timestamp after = Timestamp.valueOf(LocalDateTime.now());
+        System.out.println("Duracion: " + (after.getTime() - before.getTime()));
     }
 }
